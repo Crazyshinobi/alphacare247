@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import SEO from '../components/SEO';
 
 import Banner from "../assets/banner.png";
 import Kidney from "../assets/services/1.png";
@@ -46,7 +47,13 @@ const HomePage = () => {
       };
 
   return (
-    <div className="font-sans bg-white text-gray-700">
+    <>
+      <SEO 
+        title="AlphaCare247 - Home Healthcare Services | Blood Tests & Health Checkups"
+        description="Professional home healthcare services in Delhi. Book blood tests, health checkups, and medical consultations at home. NABL-accredited labs, certified professionals, affordable packages starting ₹250."
+        type="website"
+      />
+      <div className="font-sans bg-white text-gray-700">
       {/* Header/Banner */}
       <section id="banner">
         <img className='w-full' src={Banner} alt="" />
@@ -285,7 +292,8 @@ const HomePage = () => {
           </form>
         </div>
       </div>
-    </div>
+      </div>
+    </>
   )
 }
 

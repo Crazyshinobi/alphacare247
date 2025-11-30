@@ -1,5 +1,6 @@
 import React from 'react'
 import { useParams } from 'react-router-dom'
+import SEO from '../components/SEO'
 
 const BlogDetailPage1 = () => {
   const { id } = useParams()
@@ -215,7 +216,14 @@ const BlogDetailPage1 = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50 py-8">
+    <>
+      <SEO 
+        title={blogData.title}
+        description={blogData.excerpt}
+        image={blogData.image}
+        type="article"
+      />
+      <div className="min-h-screen bg-gray-50 py-8">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Breadcrumb */}
         <nav className="mb-8 text-sm text-gray-600">
@@ -311,7 +319,8 @@ const BlogDetailPage1 = () => {
         </div> */}
 
       </div>
-    </div>
+      </div>
+    </>
   )
 }
 

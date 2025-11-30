@@ -1,8 +1,11 @@
 import React from 'react'
 import { useParams } from 'react-router-dom'
+import SEO from '../components/SEO'
+import { getBlogBySlug } from '../data/blogs'
 
 const BlogDetailPage3 = () => {
   const { id } = useParams()
+  const blog = getBlogBySlug('onsite-blood-testing-saves-time')
 
  const blogData = {
   title: "Doctor-Centric Diagnostics: How On-Site Blood Testing Saves Time for Patients",
@@ -180,7 +183,14 @@ const BlogDetailPage3 = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50 py-8">
+    <>
+      <SEO 
+        title={blog?.title || 'On-Site Blood Testing - AlphaCare247'}
+        description={blog?.excerpt || 'Learn how on-site blood testing saves time for patients with doctor-centric diagnostics.'}
+        image={blog?.image}
+        type="article"
+      />
+      <div className="min-h-screen bg-gray-50 py-8">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Breadcrumb */}
         <nav className="mb-8 text-sm text-gray-600">
@@ -276,7 +286,8 @@ const BlogDetailPage3 = () => {
         </div> */}
 
       </div>
-    </div>
+      </div>
+    </>
   )
 }
 

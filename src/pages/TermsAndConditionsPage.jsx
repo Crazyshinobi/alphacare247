@@ -1,8 +1,15 @@
 import React from 'react';
+import SEO from '../components/SEO';
 
 const TermsAndConditionsPage = () => {
   return (
-    <div className="min-h-screen bg-gray-50 py-12">
+    <>
+      <SEO 
+        title="Terms and Conditions - AlphaCare247"
+        description="Read AlphaCare247's terms and conditions for using our home healthcare services, blood tests, and health checkup packages."
+        type="website"
+      />
+      <div className="min-h-screen bg-gray-50 py-12">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-12">
@@ -269,7 +276,8 @@ const TermsAndConditionsPage = () => {
           </div>
         </div>
       </div>
-    </div>
+      </div>
+    </>
   );
 };
 

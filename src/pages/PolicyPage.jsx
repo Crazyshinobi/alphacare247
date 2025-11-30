@@ -1,8 +1,15 @@
 import React from 'react';
+import SEO from '../components/SEO';
 
 const PolicyPage = () => {
   return (
-    <div className="min-h-screen bg-gray-50 py-12">
+    <>
+      <SEO 
+        title="Privacy Policy - AlphaCare247"
+        description="Read AlphaCare247's privacy policy to understand how we collect, use, and protect your personal information for our home healthcare services."
+        type="website"
+      />
+      <div className="min-h-screen bg-gray-50 py-12">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-12">
@@ -180,7 +187,8 @@ const PolicyPage = () => {
           </div>
         </div>
       </div>
-    </div>
+      </div>
+    </>
   );
 };
 
