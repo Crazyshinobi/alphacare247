@@ -47,6 +47,22 @@ const Navbar = () => {
             </a>
             <a
               href="#"
+              className={`relative font-medium group ${activeItem === 'Sections' ? 'text-primary' : 'text-gray-700'}`}
+              onClick={() => handleItemClick('Sections')}
+            >
+              Services
+              <span className={`absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full ${activeItem === 'Sections' ? 'w-full' : ''}`}></span>
+            </a>
+            <a
+              href="#"
+              className={`relative font-medium group ${activeItem === 'Locations' ? 'text-primary' : 'text-gray-700'}`}
+              onClick={() => handleItemClick('Locations')}
+            >
+              Locations
+              <span className={`absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full ${activeItem === 'Locations' ? 'w-full' : ''}`}></span>
+            </a>
+            <a
+              href="#"
               className={`relative font-medium group ${activeItem === 'Policy' ? 'text-primary' : 'text-gray-700'}`}
               onClick={() => handleItemClick('Policy')}
             >
@@ -102,6 +118,20 @@ const Navbar = () => {
             onClick={() => handleItemClick('Home')}
           >
             Home
+          </a>
+          <a
+            href="#"
+            className={`block px-4 py-3 rounded-lg text-base font-medium transition-all duration-300 ${activeItem === 'Sections' ? 'text-primary bg-teal-50 transform -translate-x-1' : 'text-gray-700 hover:text-primary hover:bg-teal-50'}`}
+            onClick={() => handleItemClick('Sections')}
+          >
+            Services
+          </a>
+          <a
+            href="#"
+            className={`block px-4 py-3 rounded-lg text-base font-medium transition-all duration-300 ${activeItem === 'Locations' ? 'text-primary bg-teal-50 transform -translate-x-1' : 'text-gray-700 hover:text-primary hover:bg-teal-50'}`}
+            onClick={() => handleItemClick('Locations')}
+          >
+            Locations
           </a>
           <a
             href="#"

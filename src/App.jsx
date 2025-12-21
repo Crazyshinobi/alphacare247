@@ -10,6 +10,8 @@ import BlogsPage from './pages/BlogsPage';
 import BlogDetailPage1 from './pages/BlogDetailPage1';
 import BlogDetailPage2 from './pages/BlogDetailPage2';
 import BlogDetailPage3 from './pages/BlogDetailPage3';
+import Sections from './pages/Sections';
+import Locations from './pages/Locations';
 
 const App = () => {
   return (
@@ -18,6 +20,8 @@ const App = () => {
 
       <Routes>
         <Route path="/" element={<HomePage />} />
+        <Route path="/sections" element={<Sections />} />
+        <Route path="/locations" element={<Locations />} />
         <Route path="/policy" element={<PolicyPage />} />
         <Route path="/terms-and-conditions" element={<TermsAndConditionsPage />} />
         <Route path="/blogs" element={<BlogsPage />} />
