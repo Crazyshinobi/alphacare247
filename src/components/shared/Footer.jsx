@@ -29,6 +29,9 @@ const Footer = () => {
         <div>
           <h3 className="text-xl font-semibold mb-4">Social Media</h3>
           <div className="flex space-x-4">
+            <a href="https://www.facebook.com/Alphacare24x7" className="w-10 h-10 rounded-full bg-gray-700 flex items-center justify-center hover:bg-primary transition-colors">
+              <i className="fab fa-facebook"></i>
+            </a>
             <a href="https://www.instagram.com/alphacare24x7?igsh=MW4xcGp0enQ4cTEybg==" className="w-10 h-10 rounded-full bg-gray-700 flex items-center justify-center hover:bg-primary transition-colors">
               <i className="fab fa-instagram"></i>
             </a>
