@@ -1,73 +1,75 @@
 import fs from 'fs';
 import path from 'path';
 
-const routes = [
-  {
-    path: '/',
-    title: 'AlphaCare247 - Home Healthcare Services | Blood Tests & Health Checkups',
-    description: 'Professional home healthcare services in Delhi. Book blood tests, health checkups, and medical consultations at home. NABL-accredited labs, certified professionals, affordable packages starting ₹250.'
+// Define your routes and their meta data
+const routes = {
+  '/': {
+    title: 'Blood Test at Home in Delhi – ₹99+ | AlphaCare247',
+    description: 'Book NABL blood test at home in Delhi-NCR from ₹99. Same-day reports, free collection anywhere. Call/WhatsApp 8377-895-404'
   },
-  {
-    path: '/blogs',
-    title: 'Health & Medical Blogs - AlphaCare247',
-    description: 'Read expert insights on home healthcare, blood tests, health checkups, and medical diagnostics. Stay informed with AlphaCare247\'s health blog.'
+  '/blogs': {
+    title: 'On-Site Blood Testing Delhi – Save Time & Stress',
+    description: 'Doctor-led guide: How on-site blood testing brings lab accuracy to your home in Delhi traffic. Results in minutes. AlphaCare247'
   },
-  {
-    path: '/blog/home-blood-test-services-in-delhi',
-    title: 'Home Blood Test Services in Delhi – Convenient & Affordable with AlphaCare247',
-    description: 'Skip long lab queues with home blood test services in Delhi. AlphaCare247 offers NABL-accredited lab tie-ups, certified phlebotomists, and fast digital reports.'
+  '/policy': {
+    title: 'Privacy Policy | AlphaCare247',
+    description: 'How AlphaCare247 protects your personal & medical data. 100% secure & transparent privacy practices.'
   },
-  {
-    path: '/blog/benefits-of-booking-health-checkup',
-    title: 'TOP 5 BENEFITS OF BOOKING A HEALTH CHECKUP PACKAGE ONLINE',
-    description: 'Taking charge of your health doesn\'t have to be overwhelming. In an era where convenience is king, booking a health checkup package online is transforming how we approach preventive care.'
+  '/terms-and-conditions': {
+    title: 'Terms and Conditions | AlphaCare247',
+    description: 'Terms and conditions for AlphaCare247 home healthcare services.'
   },
-  {
-    path: '/blog/onsite-blood-testing-saves-time',
-    title: 'DOCTOR-CENTRIC DIAGNOSTICS: HOW ON-SITE BLOOD TESTING SAVES TIME FOR PATIENTS',
-    description: 'In today\'s fast-paced world, patients value convenience and efficiency in healthcare. Doctor-centric diagnostics, particularly on-site blood testing, is revolutionizing how medical care is delivered.'
+  '/sections': {
+    title: 'Blood Test at Home Delhi | Free Collection – AlphaCare247',
+    description: 'CBC, Thyroid, Sugar, Lipid, Vitamin D tests at your doorstep in Delhi, Noida, Ghaziabad. NABL lab, reports in 6–8 hrs. Call 8377-895-404'
   },
-  {
-    path: '/policy',
-    title: 'Privacy Policy - AlphaCare247',
-    description: 'Read AlphaCare247\'s privacy policy to understand how we collect, use, and protect your personal information for our home healthcare services.'
-  },
-  {
-    path: '/terms-and-conditions',
-    title: 'Terms and Conditions - AlphaCare247',
-    description: 'Read AlphaCare247\'s terms and conditions for using our home healthcare services, blood tests, and health checkup packages.'
+  '/locations': {
+    title: 'Blood Test at Home Delhi – All Areas Covered',
+    description: 'Free blood test home collection in South Delhi, East Delhi, North Delhi, West Delhi, Central Delhi. Same-day reports. Call/WhatsApp 8377-895-404'
   }
-];
+};
 
-const baseHTML = fs.readFileSync('./dist/index.html', 'utf8');
+// Read the base HTML template
+const baseHtml = fs.readFileSync('dist/index.html', 'utf8');
 
-routes.forEach(route => {
-  let html = baseHTML;
+// Generate HTML for each route
+Object.entries(routes).forEach(([route, meta]) => {
+  let html = baseHtml;
   
-  // Replace title
-  html = html.replace(/<title>.*?<\/title>/, `<title>${route.title}</title>`);
+  // Replace title and meta tags
+  html = html.replace(
+    /<title>.*?<\/title>/,
+    `<title>${meta.title}</title>`
+  );
   
-  // Replace description
-  html = html.replace(/<meta name="description" content=".*?"/, `<meta name="description" content="${route.description}"`);
+  html = html.replace(
+    /<meta name="description" content=".*?" \/>/,
+    `<meta name="description" content="${meta.description}" />`
+  );
   
-  // Update Open Graph
-  html = html.replace(/<meta property="og:title" content=".*?"/, `<meta property="og:title" content="${route.title}"`);
-  html = html.replace(/<meta property="og:description" content=".*?"/, `<meta property="og:description" content="${route.description}"`);
+  html = html.replace(
+    /<meta property="og:title" content=".*?" \/>/,
+    `<meta property="og:title" content="${meta.title}" />`
+  );
   
-  // Update Twitter
-  html = html.replace(/<meta name="twitter:title" content=".*?"/, `<meta name="twitter:title" content="${route.title}"`);
-  html = html.replace(/<meta name="twitter:description" content=".*?"/, `<meta name="twitter:description" content="${route.description}"`);
+  html = html.replace(
+    /<meta property="og:description" content=".*?" \/>/,
+    `<meta property="og:description" content="${meta.description}" />`
+  );
   
-  // Create directory structure
-  const filePath = route.path === '/' ? './dist/index.html' : `./dist${route.path}/index.html`;
-  const dir = path.dirname(filePath);
+  // Create directory if needed
+  const routePath = route === '/' ? '' : route;
+  const dir = path.join('dist', routePath);
   
-  if (!fs.existsSync(dir)) {
+  if (routePath && !fs.existsSync(dir)) {
     fs.mkdirSync(dir, { recursive: true });
   }
   
+  // Write the HTML file
+  const filePath = route === '/' ? 'dist/index.html' : `dist${route}/index.html`;
   fs.writeFileSync(filePath, html);
+  
   console.log(`Generated: ${filePath}`);
 });
 
-console.log('Static HTML files generated with unique meta tags!');
+console.log('Static HTML files generated successfully!');

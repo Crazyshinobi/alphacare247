@@ -24,6 +24,14 @@ app.get('/policy', (req, res) => {
   res.sendFile(path.join(__dirname, 'dist/policy/index.html'));
 });
 
+app.get('/sections', (req, res) => {
+  res.sendFile(path.join(__dirname, 'dist/sections/index.html'));
+});
+
+app.get('/locations', (req, res) => {
+  res.sendFile(path.join(__dirname, 'dist/locations/index.html'));
+});
+
 // Serve static files AFTER specific routes
 app.use(express.static(path.join(__dirname, 'dist')));
 
