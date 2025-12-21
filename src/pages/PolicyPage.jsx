@@ -5,8 +5,8 @@ const PolicyPage = () => {
   return (
     <>
       <SEO 
-        title="Privacy Policy - AlphaCare247"
-        description="Read AlphaCare247's privacy policy to understand how we collect, use, and protect your personal information for our home healthcare services."
+        title="Privacy Policy | AlphaCare247"
+        description="How AlphaCare247 protects your personal & medical data. 100% secure & transparent privacy practices."
         type="website"
       />
       <div className="min-h-screen bg-gray-50 py-12">

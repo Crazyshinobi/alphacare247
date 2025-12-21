@@ -5,8 +5,8 @@ const TermsAndConditionsPage = () => {
   return (
     <>
       <SEO 
-        title="Terms and Conditions - AlphaCare247"
-        description="Read AlphaCare247's terms and conditions for using our home healthcare services, blood tests, and health checkup packages."
+        title="Terms & Conditions | AlphaCare247"
+        description="Booking, payment, cancellation & refund policy of AlphaCare247 diagnostic services."
         type="website"
       />
       <div className="min-h-screen bg-gray-50 py-12">

@@ -9,8 +9,8 @@ const Sections = () => {
   return (
     <>
       <SEO 
-        title="AlphaCare247 - Our Services | Blood Tests & Health Scans"
-        description="Comprehensive diagnostic services including blood tests, health scans, and imaging tests. NABL-accredited pathology and radiology services at home."
+        title="Blood Test at Home Delhi | Free Collection – AlphaCare247"
+        description="CBC, Thyroid, Sugar, Lipid, Vitamin D tests at your doorstep in Delhi, Noida, Ghaziabad. NABL lab, reports in 6–8 hrs. Call 8377-895-404"
         type="website"
       />
       <div className="font-sans bg-white text-gray-700">

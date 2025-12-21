@@ -38,9 +38,6 @@ const Footer = () => {
             <a href="#" className="w-10 h-10 rounded-full bg-gray-700 flex items-center justify-center hover:bg-primary transition-colors">
               <i className="fab fa-linkedin-in"></i>
             </a>
-            <a href="#" className="w-10 h-10 rounded-full bg-gray-700 flex items-center justify-center hover:bg-primary transition-colors">
-              <i className="fab fa-twitter"></i>
-            </a>
           </div>
         </div>
       </div>

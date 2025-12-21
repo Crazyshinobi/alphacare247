@@ -50,8 +50,8 @@ const Locations = () => {
   return (
     <>
       <SEO 
-        title="AlphaCare247 - Our Locations | Home Healthcare Services Near You"
-        description="Find AlphaCare247 service locations across Delhi NCR, Noida, and Lucknow. Professional home healthcare services available in your area."
+        title="Blood Test at Home Delhi – All Areas Covered"
+        description="Free blood test home collection in South Delhi, East Delhi, North Delhi, West Delhi, Central Delhi. Same-day reports. Call/WhatsApp 8377-895-404"
         type="website"
       />
       <div className="font-sans bg-white text-gray-700">

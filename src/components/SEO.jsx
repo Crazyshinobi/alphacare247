@@ -19,11 +19,6 @@ const SEO = ({
       <meta property="og:url" content={url} />
       <meta property="og:type" content={type} />
       
-      {/* Twitter */}
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content={title} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={image} />
       
       {/* Additional SEO */}
       <meta name="robots" content="index, follow" />

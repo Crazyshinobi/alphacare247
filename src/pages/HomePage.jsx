@@ -46,8 +46,8 @@ const HomePage = () => {
   return (
     <>
       <SEO 
-        title="AlphaCare247 - Home Healthcare Services | Blood Tests & Health Checkups"
-        description="Professional home healthcare services in Delhi. Book blood tests, health checkups, and medical consultations at home. NABL-accredited labs, certified professionals, affordable packages starting ₹250."
+        title="Blood Test at Home in Delhi – ₹99+ | AlphaCare247"
+        description="Book NABL blood test at home in Delhi-NCR from ₹99. Same-day reports, free collection anywhere. Call/WhatsApp 8377-895-404"
         type="website"
       />
       <div className="font-sans bg-white text-gray-700">

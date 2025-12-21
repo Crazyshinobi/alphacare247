@@ -7,8 +7,8 @@ const BlogsPage = () => {
   return (
     <>
       <SEO 
-        title="Health & Medical Blogs - AlphaCare247"
-        description="Read expert insights on home healthcare, blood tests, health checkups, and medical diagnostics. Stay informed with AlphaCare247's health blog."
+        title="On-Site Blood Testing Delhi – Save Time & Stress"
+        description="Doctor-led guide: How on-site blood testing brings lab accuracy to your home in Delhi traffic. Results in minutes. AlphaCare247"
         type="website"
       />
       <div className="min-h-screen bg-bg-grey py-12 px-4 sm:px-6 lg:px-8">
